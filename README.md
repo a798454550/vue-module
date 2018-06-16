@@ -10,7 +10,7 @@
 # 用法
 
 ```
-npm i -g vue-cli
+npm i -g vue-cli   //安装一次即可
 vue init a798454550/vue-module components-name
 ```
 components-name 为你的组件名称。
