@@ -34,6 +34,10 @@ module.exports = {
       message: "请选择适用范围",
       default: 0,
       choices: [{
+          "name": "通用（以@project/作为前缀）",
+          "value": "common",
+          "short": "通用（以@project/作为前缀）"
+      },{
         "name": "项目（自行定义名字，没有前缀）",
         "value": "project",
         "short": "项目（自行定义名字，没有前缀）"
@@ -74,15 +78,22 @@ module.exports = {
       type: 'string',
       message: '作者'
     },
-    githubAccount: {
-      type: 'string',
-      required: false,
-      message: 'GitHub账号',
-      default: ''
-    },
-    vux: {
-      type: 'confirm',
-      message: '是否使用vux作为UI库?'
+    uiLibrary: {
+        type: "list",
+        message: "请选择UI库",
+        default: 0,
+        choices: [{
+            "name": "Vux",
+            "value": "vux",
+            "short": "活跃度高"
+        }, {
+            "name": "mint-ui",
+            "value": "mint-ui",
+            "short": "饿了么前端团队"
+        }, {
+            "name": "都不使用",
+            "value": "none"
+        }]
     },
     css: {
       type: "list",

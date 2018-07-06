@@ -1,5 +1,5 @@
 {
-  "name": "{{#if_eq scope 'common'}}@strongsoft/{{/if_eq}}{{ name }}",
+  "name": "{{#if_eq scope 'common'}}@project/{{/if_eq}}{{ name }}",
   "description": "{{ description }}",
   "version": "{{ version }}",
   "author": {
@@ -17,20 +17,13 @@
     "lint": "eslint --ext .js,.vue src",
     "fix": "npm run lint -- --fix"
   },
-  {{#unless_eq githubAccount ""}}
-  "repository": {
-    "type": "git",
-    "url": "git+http://git.strongsoft.net:6280/{{ githubAccount }}/{{ name }}.git"
-  },
-  "bugs": {
-    "url": "http://git.strongsoft.net:6280/{{ githubAccount }}/{{ name }}/issues"
-  },
-  "homepage": "http://git.strongsoft.net:6280/{{ githubAccount }}/{{ name }}#readme",
-  {{/unless_eq}}
   "dependencies": {
-    {{#vux}}
+    {{#if_eq uiLibrary "vux"}}
     "vux": "^2.9.0",
-    {{/vux}}
+    {{/if_eq}}
+    {{#if_eq uiLibrary "mint-ui"}}
+    "mint-ui": "^2.2.13",
+    {{/if_eq}}
     "vue": "^2.5.11"
   },
   "devDependencies": {
@@ -73,12 +66,13 @@
     {{#if_eq css "stylus"}}
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",
-    {{/if_eq}} 
-    {{#vux}}
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
+    {{/if_eq}}
+    {{#if_eq uiLibrary "vux"}}
     "vux-loader": "^1.0.56",
-    {{/vux}}
+    {{/if_eq}}
+    {{#if_eq uiLibrary "mint-ui"}}
+    "babel-plugin-component": "^0.10.0",
+    {{/if_eq}}
     "vue-loader": "^13.0.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.4.4",
