@@ -85,7 +85,7 @@ module.exports = {
         choices: [{
             "name": "Vux",
             "value": "vux",
-            "short": "活跃度高"
+            "short": "Vux,一款基于移动端的UI框架"
         }, {
             "name": "mint-ui",
             "value": "mint-ui",
