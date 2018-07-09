@@ -166,20 +166,20 @@ Hello `+ name + `
 
 <script>
 export default {
-  name: '`+ name + `',
-  props: {
-  
-  },
-  data () {
-    return {
+    name: '`+ name + `',
+    props: {
+    
+    },
+    data () {
+        return {
+        }
+    },
+    created () {
+    },
+    mounted () {
+    },
+    methods: {
     }
-  },
-  created () {
-  },
-  mounted () {
-  },
-  methods: {
-  }
 }
 </script>
 
