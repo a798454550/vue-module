@@ -4,9 +4,9 @@ var utils = require('./utils')
 var config = require('./devConfig')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
-{{#vux}}
+{{#if_eq uiLibrary "vux"}}
 const vuxLoader = require('vux-loader');
-{{/vux}}
+{{/if_eq}}
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -100,10 +100,10 @@ let webpackConfig = {
   ]
 };
 
-{{#vux}}
+{{#if_eq uiLibrary "vux"}}
 module.exports = vuxLoader.merge(webpackConfig, {
   plugins: ['vux-ui', 'progress-bar', 'duplicate-style']
 });
 {{else}}
 module.exports = webpackConfig;
-{{/vux}}
+{{/if_eq}}
