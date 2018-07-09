@@ -4,7 +4,7 @@
 
 一个非常简单的[vue-cli]（https://github.com/vuejs/vue-cli）模板，可以用`.vue`组件编写和发布vue插件。
 
-主要思路来源于 [vue-share-components](https://github.com/Akryum/vue-share-components)、[simple-cli](https://github.com/strongdevx/simple-cli).
+主要思路来源于 [vue-share-components](https://github.com/Akryum/vue-share-components).
 
 
 # 用法
