@@ -55,7 +55,7 @@
     "url-loader": "^0.5.8",
     "json-loader": "^0.5.4",
     "style-loader": "0.13.1",
-    {{#if ( (eq css "less") (eq uiLibrary "vux"))}}
+    {{#if (or (eq css "less") (eq uiLibrary "vux"))}}
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     {{/if}}
