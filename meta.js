@@ -158,7 +158,7 @@ module.exports = {
     );
     let name = kebabToCamel(data.name);
     name = `${data.scope === 'common' ? 'IString-' + name : name}`;
-    const cssType = data.css === 'sass' ? 'lang="scss"' : '';
+    const cssType = data.css === 'sass' ? ' lang="scss"' : '';
     const componentContent = `<template>
 <div class='`+ name + `'>
 Hello `+ name + `
