@@ -4,6 +4,14 @@
     "stage-3"
   ],
   "plugins": [
+    {{#if_eq uiLibrary "mint-ui"}}
+    ["component", [
+      {
+      "libraryName": "mint-ui",
+      "style": true
+      }
+    ]],
+    {{/if_eq}}
     "syntax-dynamic-import"
   ],
   "env": {
@@ -14,10 +22,10 @@
       ],
       "plugins": [
         "transform-vue-jsx",
-        {{#vux}}
+        {{#if_eq uiLibrary "vux"}}
         "transform-es2015-modules-commonjs",
         "dynamic-import-node"
-        {{/vux}}
+        {{/if_eq}}
       ]
     }
   }
