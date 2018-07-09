@@ -125,8 +125,8 @@ module.exports = {
       const endPosition = author.indexOf('>')
       return author.slice(startPosition + 1, endPosition < -1 ? -1 : endPosition).trim()
     },
-    if_or: function (v1, v2, options) {
-        if (v1 || v2) {
+    if_or_less: function (css, uiLibrary, options) {
+        if (css === 'less' || uiLibrary === 'vux') {
             return options.fn(this);
         }
         return options.inverse(this);
