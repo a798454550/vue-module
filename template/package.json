@@ -55,10 +55,10 @@
     "url-loader": "^0.5.8",
     "json-loader": "^0.5.4",
     "style-loader": "0.13.1",
-    {{#if (or (eq css "less") (eq uiLibrary "vux"))}}
+    {{#xif css == "less" || uiLibrary == "vux"}}
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    {{/if}}
+    {{/xif}}
     {{#if_eq css "sass"}}
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.0",
